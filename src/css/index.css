@@ -1,0 +1,150 @@
+.body {
+  margin: 0;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.helpCursor {
+  cursor: help;
+}
+
+.alignChevron {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.pokemon {
+  height: 100px;
+  width: auto;
+  margin: 50px;
+}
+
+.pokedexChild {
+  width: 50% !important;
+}
+
+.pokedexChild,
+.pokemon {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pokemon-card {
+  cursor: pointer;
+}
+
+.pill {
+  border: 2px solid #a4a4a4;
+  border-radius: 5px;
+}
+
+.pill,
+.infoCol {
+    line-height: 28px;
+    width: 45% !important;
+    float: left;
+    max-width: 110px !important;
+    font-size: 16px;
+    text-align: center;
+  }
+
+.darkText,
+.background-Ground,
+.background-Normal,
+.background-Steel,
+.background-Fairy,
+.background-Electric,
+.background-Flying,
+.background-Grass,
+.background-Ice {
+  color: #212121;
+}
+
+.background-Bug,
+.background-Dragon,
+.background-Fire,
+.background-Ghost,
+.background-Psychic,
+.background-Dark,
+.background-Fighting,
+.background-Poison,
+.background-Rock,
+.background-Water {
+  color: #fff;
+}
+
+.background-Normal {
+  background-color: #a4acaf;
+}
+
+.background-Grass {
+  background-color: #9bcc50;
+}
+
+.background-Poison {
+  background-color: #b97fc9;
+}
+
+.background-Fire {
+  background-color: #fd7d24;
+}
+
+.background-Water {
+  background-color: #4592c4;
+}
+
+.background-Bug {
+  background-color: #729f3f;
+}
+
+.background-Dragon {
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+}
+
+.background-Fairy {
+  background-color: #fdb9e9;
+}
+
+.background-Ghost {
+  background-color: #7b62a3;
+}
+
+.background-Ground {
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+}
+
+.background-Psychic {
+  background-color: #f366b9;
+}
+
+.background-Dark {
+  background-color: #707070;
+}
+
+.background-Steel {
+  background-color: #9eb7b8;
+}
+
+.background-Electric {
+  background-color: #eed535;
+}
+
+.background-Fighting {
+  background-color: #d56723;
+}
+
+.background-Flying {
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+}
+
+.background-Ice {
+  background-color: #51c4e7;
+}
+
+.background-Rock {
+  background-color: #a38c21;
+}
