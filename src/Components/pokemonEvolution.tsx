@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import pokemonJson from '../Json/pokemonJson.ts';
@@ -7,17 +7,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { Pokemon } from '../Interfaces/PokemonInterface.ts';
 
-function PokemonEvolution(props: { currentPokemon: any; evolutions: number[] | undefined; setPokemon: (arg0: any) => void; }) {
-  const [pokemons, setPokemons] = useState([]);
-  const [currentPokemon] = useState(props.currentPokemon);
+function PokemonEvolution(props: { currentPokemon: Pokemon; evolutions: readonly number[]; setPokemon: (arg0: any) => void; }) {
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const [currentPokemon] = useState<Pokemon>(props.currentPokemon);
   useEffect(() => {
     let linkedPokemons : Pokemon[] = [];
-    if (props.evolutions === undefined) {
+    if (props.evolutions.length == 0) {
       return;
     }
     props.evolutions.forEach((pokemonId: number) => {
       let linkedPokemon : Pokemon[] = pokemonJson["pokemons"].filter(function(item) { return item.id === pokemonId; });
-      if (linkedPokemon.length > 0) {
+      if (linkedPokemon[0] !== undefined) {
         linkedPokemons.push(linkedPokemon[0]);
       }
     });

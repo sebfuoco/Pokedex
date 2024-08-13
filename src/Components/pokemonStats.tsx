@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import Row from 'react-bootstrap/Row';
+import { Stats } from '../Interfaces/StatInterface';
 
-function PokemonStats(props) {
-  const [stats] = useState(props.stats);
-  const [pokemonTotalStats, setPokemonTotalStats] = useState(0);
+function PokemonStats(props : {stats: Stats}) {
+  const [stats] = useState<Stats>(props.stats);
+  const [pokemonTotalStats, setPokemonTotalStats] = useState<number>(0);
 
   useEffect(() => {
     let totalStats = 0;
@@ -19,13 +20,13 @@ function PokemonStats(props) {
     stats !== undefined &&
       <Row className='d-flex justify-content-center text-center'>
         <h4>Stats</h4>
-        <p className='m-1 infoCol' id='hp'>HP: {stats.hp.base}</p>
-        <p className='m-1 infoCol' id='attack'>Attack: {stats.attack.base}</p>
-        <p className='m-1 infoCol' id='defense'>Defense: {stats.defense.base}</p>
-        <p className='m-1 infoCol' id='specialAtk'>Sp. Atk: {stats.specialAtk.base}</p>
-        <p className='m-1 infoCol' id='specialDef'>Sp. Def: {stats.specialDef.base}</p>
-        <p className='m-1 infoCol' id='speed'>Speed: {stats.speed.base}</p>
-        <p className='m-1 infoCol'>Total: {pokemonTotalStats}</p>
+        <p className='m-1 infoCol' id='hp'>HP: <br/> {stats.hp.base}</p>
+        <p className='m-1 infoCol' id='attack'>Attack: <br/> {stats.attack.base}</p>
+        <p className='m-1 infoCol' id='defense'>Defense: <br/> {stats.defense.base}</p>
+        <p className='m-1 infoCol' id='specialAtk'>Sp. Atk: <br/> {stats.specialAtk.base}</p>
+        <p className='m-1 infoCol' id='specialDef'>Sp. Def: <br/> {stats.specialDef.base}</p>
+        <p className='m-1 infoCol' id='speed'>Speed: <br/> {stats.speed.base}</p>
+        <p className='m-1 infoCol'>Total: <br/> {pokemonTotalStats}</p>
       </Row>
   );
 }

@@ -3,6 +3,7 @@ import * as PokemonName from '../Constants/PokemonNameConstants.ts'
 import * as Species from '../Constants/SpeciesConstants.ts'
 import * as Ability from '../Constants/AbilityConstants.ts'
 import * as Gender from '../Constants/GenderConstants.ts'
+import * as Evolution from '../Constants/PokemonEvolutionConstants.ts'
 import { Pokemon } from '../Interfaces/PokemonInterface.ts'
 
 const pokedex : string = `pokedex`;
@@ -14,6 +15,8 @@ const addImagePath = (name : string, path : string) => imagePath.replace('0', pa
 interface PokemonJson {
     readonly pokemons: Pokemon[];
 }
+
+const evolutions = [1, 2, 3];
 
 const pokemonJson : PokemonJson = {
     pokemons: [
@@ -63,7 +66,7 @@ const pokemonJson : PokemonJson = {
                 max: 207,
             },
         },
-        evolutions: [1, 2, 3]
+        evolutions: Evolution.Bulbasaur
     },
     {
         id: 2,
@@ -72,7 +75,46 @@ const pokemonJson : PokemonJson = {
         img: addImagePath(PokemonName.Ivysaur, pokedex),
         pokedexImg: addImagePath(PokemonName.Ivysaur, pokemon),
         types: [Type.Grass, Type.Poison],
-        evolutions: [1, 2, 3]
+        info: {
+            height: '1m',
+            species: Species.Seed,
+            weight: '13kg',
+            abilties: [Ability.Overgrow, Ability.Chlorophyll],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 60,
+                min: 230,
+                max: 324,
+            },
+            attack: {
+                base: 62,
+                min: 116,
+                max: 245,
+            },
+            defense: {
+                base: 63,
+                min: 117,
+                max: 247,
+            },
+            specialAtk: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            specialDef: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            speed: {
+                base: 60,
+                min: 112,
+                max: 240,
+            },
+        },
+        evolutions: Evolution.Bulbasaur
     },
     {
         id: 3,
@@ -81,7 +123,46 @@ const pokemonJson : PokemonJson = {
         img: addImagePath(PokemonName.Venusaur, pokedex),
         pokedexImg: addImagePath(PokemonName.Venusaur, pokemon),
         types: [Type.Grass, Type.Poison],
-        evolutions: [1, 2, 3]
+        info: {
+            height: '2m',
+            species: Species.Seed,
+            weight: '100kg',
+            abilties: [Ability.Overgrow, Ability.Chlorophyll],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 80,
+                min: 270,
+                max: 364,
+            },
+            attack: {
+                base: 82,
+                min: 152,
+                max: 289,
+            },
+            defense: {
+                base: 83,
+                min: 153,
+                max: 291,
+            },
+            specialAtk: {
+                base: 100,
+                min: 184,
+                max: 328,
+            },
+            specialDef: {
+                base: 100,
+                min: 184,
+                max: 328,
+            },
+            speed: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+        },
+        evolutions: Evolution.Bulbasaur
     },
     {
         id: 4,
@@ -89,7 +170,47 @@ const pokemonJson : PokemonJson = {
         description: 'It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.',
         img: addImagePath(PokemonName.Charmander, pokedex),
         pokedexImg: addImagePath(PokemonName.Charmander, pokemon),
-        types: [Type.Fire]
+        types: [Type.Fire],
+        info: {
+            height: '0.6m',
+            species: Species.Lizard,
+            weight: '8.5kg',
+            abilties: [Ability.Blaze, Ability.SolarPower],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 39,
+                min: 188,
+                max: 282,
+            },
+            attack: {
+                base: 52,
+                min: 98,
+                max: 223,
+            },
+            defense: {
+                base: 43,
+                min: 81,
+                max: 203,
+            },
+            specialAtk: {
+                base: 60,
+                min: 112,
+                max: 240,
+            },
+            specialDef: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            speed: {
+                base: 65,
+                min: 121,
+                max: 251,
+            },
+        },
+        evolutions: Evolution.Charmander
     },
     {
         id: 5,
@@ -97,7 +218,47 @@ const pokemonJson : PokemonJson = {
         description: 'It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.',
         img: addImagePath(PokemonName.Charmeleon, pokedex),
         pokedexImg: addImagePath(PokemonName.Charmeleon, pokemon),
-        types: [Type.Fire]
+        types: [Type.Fire],
+        info: {
+            height: '1.1m',
+            species: Species.Flame,
+            weight: '19kg',
+            abilties: [Ability.Blaze, Ability.SolarPower],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 58,
+                min: 226,
+                max: 320,
+            },
+            attack: {
+                base: 64,
+                min: 119,
+                max: 249,
+            },
+            defense: {
+                base: 58,
+                min: 108,
+                max: 236,
+            },
+            specialAtk: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            specialDef: {
+                base: 65,
+                min: 121,
+                max: 251,
+            },
+            speed: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+        },
+        evolutions: Evolution.Charmander
     },
     {
         id: 6,
@@ -105,28 +266,191 @@ const pokemonJson : PokemonJson = {
         description: 'It is said that Charizard’s fire burns hotter if it has experienced harsh battles.',
         img: addImagePath(PokemonName.Charizard, pokedex),
         pokedexImg: addImagePath(PokemonName.Charizard, pokemon),
-        types: [Type.Fire, Type.Flying]
+        types: [Type.Fire, Type.Flying],
+        info: {
+            height: '1.7m',
+            species: Species.Flame,
+            weight: '90.5kg',
+            abilties: [Ability.Blaze, Ability.SolarPower],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 78,
+                min: 266,
+                max: 360,
+            },
+            attack: {
+                base: 84,
+                min: 155,
+                max: 293,
+            },
+            defense: {
+                base: 78,
+                min: 144,
+                max: 280,
+            },
+            specialAtk: {
+                base: 109,
+                min: 200,
+                max: 348,
+            },
+            specialDef: {
+                base: 85,
+                min: 157,
+                max: 295,
+            },
+            speed: {
+                base: 100,
+                min: 184,
+                max: 328,
+            },
+        },
+        evolutions: Evolution.Charmander
     },
     {
         id: 7,
         name: PokemonName.Squirtle,
+        description: 'It shelters itself in its shell, then strikes back with spouts of water at every opportunity.',
         img: addImagePath(PokemonName.Squirtle, pokedex),
         pokedexImg: addImagePath(PokemonName.Squirtle, pokemon),
-        types: [Type.Water]
+        types: [Type.Water],
+        info: {
+            height: '0.5m',
+            species: Species.TinyTurtle,
+            weight: '9kg',
+            abilties: [Ability.Torrent, Ability.RainDish],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 44,
+                min: 198,
+                max: 292,
+            },
+            attack: {
+                base: 48,
+                min: 90,
+                max: 214,
+            },
+            defense: {
+                base: 65,
+                min: 121,
+                max: 251,
+            },
+            specialAtk: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            specialDef: {
+                base: 64,
+                min: 119,
+                max: 249,
+            },
+            speed: {
+                base: 43,
+                min: 81,
+                max: 203,
+            },
+        },
+        evolutions: Evolution.Squirtle
     },
     {
         id: 8,
         name: PokemonName.Wartortle,
+        description: 'It is said to live 10,000 years. Its furry tail is popular as a symbol of longevity.',
         img: addImagePath(PokemonName.Wartortle, pokedex),
         pokedexImg: addImagePath(PokemonName.Wartortle, pokemon),
-        types: [Type.Water]
+        types: [Type.Water],
+        info: {
+            height: '1m',
+            species: Species.Turtle,
+            weight: '22.5kg',
+            abilties: [Ability.Torrent, Ability.RainDish],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 59,
+                min: 228,
+                max: 322,
+            },
+            attack: {
+                base: 63,
+                min: 117,
+                max: 247,
+            },
+            defense: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            specialAtk: {
+                base: 65,
+                min: 121,
+                max: 251,
+            },
+            specialDef: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            speed: {
+                base: 58,
+                min: 108,
+                max: 236,
+            },
+        },
+        evolutions: Evolution.Squirtle
     },
     {
         id: 9,
         name: PokemonName.Blastoise,
+        description: 'The jets of water it spouts from the rocket cannons on its shell can punch through thick steel.',
         img: addImagePath(PokemonName.Blastoise, pokedex),
         pokedexImg: addImagePath(PokemonName.Blastoise, pokemon),
-        types: [Type.Water]
+        types: [Type.Water],
+        info: {
+            height: '1.6m',
+            species: Species.Shellfish,
+            weight: '85.5kg',
+            abilties: [Ability.Torrent, Ability.RainDish],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 79,
+                min: 268,
+                max: 362,
+            },
+            attack: {
+                base: 83,
+                min: 153,
+                max: 291,
+            },
+            defense: {
+                base: 100,
+                min: 184,
+                max: 328,
+            },
+            specialAtk: {
+                base: 85,
+                min: 157,
+                max: 295,
+            },
+            specialDef: {
+                base: 105,
+                min: 193,
+                max: 339,
+            },
+            speed: {
+                base: 78,
+                min: 144,
+                max: 290,
+            },
+        },
+        evolutions: Evolution.Squirtle
     },
     {
         id: 10,

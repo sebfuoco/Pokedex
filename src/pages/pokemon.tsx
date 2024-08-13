@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PokemonType from '../Components/pokemonType.tsx';
 import PokemonDesc from '../Components/pokemonDesc.tsx';
+import { Pokemon } from '../Interfaces/PokemonInterface.ts';
 
-function Pokemon(props: { pokemon: any; }) {
+function PokemonPage(props: { pokemon: Pokemon; }) {
     const [pokemon] = useState(props.pokemon);
 
     if (pokemon !== undefined) {
@@ -13,6 +14,6 @@ function Pokemon(props: { pokemon: any; }) {
             </div>
         );
     }
-  }
+}
 
-  export default Pokemon;
+export default PokemonPage;

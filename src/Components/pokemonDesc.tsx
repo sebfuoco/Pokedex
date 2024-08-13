@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Pokemon } from '../Interfaces/PokemonInterface';
 
-function PokemonDesc(props: { pokemon: any; isPokedex: boolean; }) {
-  const [pokemon] = useState(props.pokemon);
-  const [pokemonId, setPokemonId] = useState(null);
-  const [isPokedex] = useState(props.isPokedex);
+function PokemonDesc(props: { pokemon: Pokemon; isPokedex: boolean; }) {
+  const [pokemon] = useState<Pokemon>(props.pokemon);
+  const [pokemonId, setPokemonId] = useState<string>("");
+  const [isPokedex] = useState<boolean>(props.isPokedex);
 
   useEffect(() => {
     setPokemonId(('000' + pokemon.id).slice(-4));

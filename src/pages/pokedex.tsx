@@ -2,14 +2,13 @@ import pokemonJson from '../Json/pokemonJson.ts';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import React, { Suspense, lazy, useState } from 'react';
+import { Suspense, useState } from 'react';
 import { Pokemon } from '../Interfaces/PokemonInterface.ts';
-
-const PokemonPage = lazy(() => import('./pokemon.tsx'));
-const PokedexPageChild = lazy(() => import('./pokedexChild.tsx'));
+import PokemonPage from './pokemon.tsx';
+import PokedexPageChild from './pokedexChild.tsx';
 
 function Pokedex() {
-    const [pokemon, setPokemon] = useState(null);
+    const [pokemon, setPokemon] = useState<Pokemon | null>(null);
     const openPokemonInfo = (pokemon: Pokemon) => setPokemon(pokemon);
     const resetPokemon = () => setPokemon(null);
 
