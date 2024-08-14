@@ -1,3 +1,5 @@
+export type types = readonly [string, string?];
+
 export const Normal : string = 'Normal';
 export const Grass : string = 'Grass';
 export const Poison : string = 'Poison';

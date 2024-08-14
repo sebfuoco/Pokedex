@@ -1,6 +1,7 @@
 import Row from 'react-bootstrap/Row';
+import { types } from '../Constants/TypesConstants';
 
-function PokemonType(props : {types : readonly string[]}) {
+function PokemonType(props : {types : types}) {
   return (
     <Row className='d-flex justify-content-center'>
       {props.types !== undefined &&

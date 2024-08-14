@@ -1,7 +1,7 @@
 interface Stat {
     readonly base: number,
     readonly min: number,
-    readonly max: number,
+    readonly max: number
 }
 
 export interface Stats {

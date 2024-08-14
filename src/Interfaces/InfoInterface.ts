@@ -5,5 +5,5 @@ export interface Info {
     readonly species: string,
     readonly weight: string,
     readonly abilties: readonly Ability[],
-    readonly gender: string | readonly string[]
+    readonly gender: string | readonly [string, string]
 }

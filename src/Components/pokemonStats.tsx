@@ -7,7 +7,7 @@ function PokemonStats(props : {stats: Stats}) {
   const [pokemonTotalStats, setPokemonTotalStats] = useState<number>(0);
 
   useEffect(() => {
-    let totalStats = 0;
+    let totalStats : number = 0;
     if (stats !== undefined) {
       Object.entries(stats).forEach(([, value] : any) => {
         totalStats += value.base;

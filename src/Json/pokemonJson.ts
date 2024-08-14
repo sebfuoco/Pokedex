@@ -455,44 +455,290 @@ const pokemonJson : PokemonJson = {
     {
         id: 10,
         name: PokemonName.Caterpie,
+        description: "It releases a stench from its red antenna to repel enemies. It grows by molting repeatedly.",
         img: addImagePath(PokemonName.Caterpie, pokedex),
         pokedexImg: addImagePath(PokemonName.Caterpie, pokemon),
-        types: [Type.Bug]
+        types: [Type.Bug],
+        info: {
+            height: '0.3m',
+            species: Species.Worm,
+            weight: '2.9kg',
+            abilties: [Ability.ShieldDust, Ability.RunAway],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 45,
+                min: 200,
+                max: 294,
+            },
+            attack: {
+                base: 30,
+                min: 58,
+                max: 174,
+            },
+            defense: {
+                base: 35,
+                min: 67,
+                max: 185,
+            },
+            specialAtk: {
+                base: 20,
+                min: 40,
+                max: 152,
+            },
+            specialDef: {
+                base: 20,
+                min: 40,
+                max: 152,
+            },
+            speed: {
+                base: 45,
+                min: 85,
+                max: 207,
+            },
+        },
+        evolutions: Evolution.Caterpie
     },
     {
         id: 11,
         name: PokemonName.Metapod,
+        description: 'A steel-hard shell protects its tender body. It quietly endures hardships while awaiting evolution.',
         img: addImagePath(PokemonName.Metapod, pokedex),
         pokedexImg: addImagePath(PokemonName.Metapod, pokemon),
-        types: [Type.Bug]
+        types: [Type.Bug],
+        info: {
+            height: '0.7m',
+            species: Species.Cocoon,
+            weight: '9.9kg',
+            abilties: [Ability.ShedSkin],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 50,
+                min: 210,
+                max: 304,
+            },
+            attack: {
+                base: 20,
+                min: 40,
+                max: 152,
+            },
+            defense: {
+                base: 55,
+                min: 103,
+                max: 229,
+            },
+            specialAtk: {
+                base: 25,
+                min: 49,
+                max: 163,
+            },
+            specialDef: {
+                base: 25,
+                min: 49,
+                max: 163,
+            },
+            speed: {
+                base: 30,
+                min: 58,
+                max: 174,
+            },
+        },
+        evolutions: Evolution.Caterpie
     },
     {
         id: 12,
         name: PokemonName.Butterfree,
+        description: 'It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen.',
         img: addImagePath(PokemonName.Butterfree, pokedex),
         pokedexImg: addImagePath(PokemonName.Butterfree, pokemon),
-        types: [Type.Bug, Type.Flying]
+        types: [Type.Bug, Type.Flying],
+        info: {
+            height: '1.1m',
+            species: Species.Butterfly,
+            weight: '32kg',
+            abilties: [Ability.CompoundEyes, Ability.TintedLens],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 60,
+                min: 230,
+                max: 324,
+            },
+            attack: {
+                base: 45,
+                min: 85,
+                max: 207,
+            },
+            defense: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            specialAtk: {
+                base: 90,
+                min: 166,
+                max: 306,
+            },
+            specialDef: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            speed: {
+                base: 70,
+                min: 130,
+                max: 262,
+            },
+        },
+        evolutions: Evolution.Caterpie
     },
     {
         id: 13,
         name: PokemonName.Weedle,
+        description: "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
         img: addImagePath(PokemonName.Weedle, pokedex),
         pokedexImg: addImagePath(PokemonName.Weedle, pokemon),
-        types: [Type.Bug, Type.Poison]
+        types: [Type.Bug, Type.Poison],
+        info: {
+            height: '0.3m',
+            species: Species.HairyBug,
+            weight: '3.2kg',
+            abilties: [Ability.ShieldDust, Ability.RunAway],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 40,
+                min: 190,
+                max: 284,
+            },
+            attack: {
+                base: 35,
+                min: 67,
+                max: 185,
+            },
+            defense: {
+                base: 30,
+                min: 58,
+                max: 174,
+            },
+            specialAtk: {
+                base: 20,
+                min: 40,
+                max: 152,
+            },
+            specialDef: {
+                base: 20,
+                min: 40,
+                max: 152,
+            },
+            speed: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+        },
+        evolutions: Evolution.Weedle
     },
     {
         id: 14,
         name: PokemonName.Kakuna,
+        description: "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
         img: addImagePath(PokemonName.Kakuna, pokedex), 
         pokedexImg: addImagePath(PokemonName.Kakuna, pokemon),
-        types: [Type.Bug, Type.Poison]
+        types: [Type.Bug, Type.Poison],
+        info: {
+            height: '0.6m',
+            species: Species.Cocoon,
+            weight: '10kg',
+            abilties: [Ability.ShedSkin],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 45,
+                min: 200,
+                max: 294,
+            },
+            attack: {
+                base: 25,
+                min: 49,
+                max: 163,
+            },
+            defense: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            specialAtk: {
+                base: 25,
+                min: 49,
+                max: 163,
+            },
+            specialDef: {
+                base: 25,
+                min: 49,
+                max: 163,
+            },
+            speed: {
+                base: 35,
+                min: 67,
+                max: 185,
+            },
+        },
+        evolutions: Evolution.Weedle
     },
     {
         id: 15,
         name: PokemonName.Beedrill,
+        description: "Its best attack involves flying around at high speed, striking with poison needles, then flying off.",
         img: addImagePath(PokemonName.Beedrill, pokedex), 
         pokedexImg: addImagePath(PokemonName.Beedrill, pokemon),
-        types: [Type.Bug, Type.Poison]
+        types: [Type.Bug, Type.Poison],
+        info: {
+            height: '1m',
+            species: Species.PoisonBee,
+            weight: '29.5kg',
+            abilties: [Ability.Swarm, Ability.Sniper],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 65,
+                min: 240,
+                max: 334,
+            },
+            attack: {
+                base: 90,
+                min: 166,
+                max: 306,
+            },
+            defense: {
+                base: 40,
+                min: 76,
+                max: 196,
+            },
+            specialAtk: {
+                base: 45,
+                min: 85,
+                max: 207,
+            },
+            specialDef: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            speed: {
+                base: 75,
+                min: 139,
+                max: 273,
+            },
+        },
+        evolutions: Evolution.Weedle
     },
     {
         id: 16,

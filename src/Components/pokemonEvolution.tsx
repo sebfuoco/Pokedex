@@ -6,16 +6,14 @@ import PokemonEvolutionChild from './pokemonEvolutionChild.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { Pokemon } from '../Interfaces/PokemonInterface.ts';
+import { Evolution } from '../Constants/PokemonEvolutionConstants.ts';
 
-function PokemonEvolution(props: { currentPokemon: Pokemon; evolutions: readonly number[]; setPokemon: (arg0: any) => void; }) {
+function PokemonEvolution(props: { currentPokemon: Pokemon; evolutions: Evolution; setPokemon: (arg0: any) => void; }) {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [currentPokemon] = useState<Pokemon>(props.currentPokemon);
   useEffect(() => {
     let linkedPokemons : Pokemon[] = [];
-    if (props.evolutions.length == 0) {
-      return;
-    }
-    props.evolutions.forEach((pokemonId: number) => {
+    props.evolutions.forEach((pokemonId: number | undefined) => {
       let linkedPokemon : Pokemon[] = pokemonJson["pokemons"].filter(function(item) { return item.id === pokemonId; });
       if (linkedPokemon[0] !== undefined) {
         linkedPokemons.push(linkedPokemon[0]);
