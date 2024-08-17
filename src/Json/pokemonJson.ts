@@ -16,8 +16,6 @@ interface PokemonJson {
     readonly pokemons: Pokemon[];
 }
 
-const evolutions = [1, 2, 3];
-
 const pokemonJson : PokemonJson = {
     pokemons: [
     {
@@ -743,93 +741,624 @@ const pokemonJson : PokemonJson = {
     {
         id: 16,
         name: PokemonName.Pidgey,
+        description: "It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.",
         img: addImagePath(PokemonName.Pidgey, pokedex), 
         pokedexImg: addImagePath(PokemonName.Pidgey, pokemon),
-        types: [Type.Normal, Type.Flying]
+        types: [Type.Normal, Type.Flying],
+        info: {
+            height: '0.3m',
+            species: Species.TinyBird,
+            weight: '1.8kg',
+            abilties: [Ability.KeenEye, Ability.BigPecks],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 40,
+                min: 190,
+                max: 284,
+            },
+            attack: {
+                base: 45,
+                min: 85,
+                max: 207,
+            },
+            defense: {
+                base: 40,
+                min: 76,
+                max: 196,
+            },
+            specialAtk: {
+                base: 35,
+                min: 67,
+                max: 185,
+            },
+            specialDef: {
+                base: 35,
+                min: 67,
+                max: 185,
+            },
+            speed: {
+                base: 56,
+                min: 105,
+                max: 232,
+            },
+        },
+        evolutions: Evolution.Pidgey
     },
     {
         id: 17,
         name: PokemonName.Pidgeotto,
+        description: "It flies over its wide territory in search of prey, downing it with its highly developed claws.",
         img: addImagePath(PokemonName.Pidgeotto, pokedex), 
         pokedexImg: addImagePath(PokemonName.Pidgeotto, pokemon),
-        types: [Type.Normal, Type.Flying]
+        types: [Type.Normal, Type.Flying],
+        info: {
+            height: '1.1m',
+            species: Species.Bird,
+            weight: '30kg',
+            abilties: [Ability.KeenEye, Ability.TangledFeet, Ability.BigPecks],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 63,
+                min: 236,
+                max: 330,
+            },
+            attack: {
+                base: 60,
+                min: 112,
+                max: 240,
+            },
+            defense: {
+                base: 55,
+                min: 103,
+                max: 229,
+            },
+            specialAtk: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            specialDef: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            speed: {
+                base: 71,
+                min: 132,
+                max: 265,
+            },
+        },
+        evolutions: Evolution.Pidgey
     },
     {
         id: 18,
         name: PokemonName.Pidgeot,
+        description: "By flapping its wings with all its might, PIDGEOT can make a gust of wind capable of bending tall trees.",
         img: addImagePath(PokemonName.Pidgeot, pokedex), 
         pokedexImg: addImagePath(PokemonName.Pidgeot, pokemon),
-        types: [Type.Normal, Type.Flying]
+        types: [Type.Normal, Type.Flying],
+        info: {
+            height: '1.5m',
+            species: Species.Bird,
+            weight: '39.5kg',
+            abilties: [Ability.KeenEye, Ability.TangledFeet, Ability.BigPecks],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 83,
+                min: 276,
+                max: 370,
+            },
+            attack: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            defense: {
+                base: 75,
+                min: 139,
+                max: 273,
+            },
+            specialAtk: {
+                base: 70,
+                min: 130,
+                max: 262,
+            },
+            specialDef: {
+                base: 70,
+                min: 130,
+                max: 262,
+            },
+            speed: {
+                base: 101,
+                min: 186,
+                max: 331,
+            },
+        },
+        evolutions: Evolution.Pidgey
     },
     {
         id: 19,
         name: PokemonName.Rattata,
+        description: "Cautious in the extreme, its hardy vitality lets it live in any kind of environment.",
         img: addImagePath(PokemonName.Rattata, pokedex), 
         pokedexImg: addImagePath(PokemonName.Rattata, pokemon),
-        types: [Type.Normal]
+        types: [Type.Normal],
+        info: {
+            height: '0.3m',
+            species: Species.Mouse,
+            weight: '3.5kg',
+            abilties: [Ability.RunAway, Ability.Guts, Ability.Hustle],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 30,
+                min: 170,
+                max: 264,
+            },
+            attack: {
+                base: 56,
+                min: 105,
+                max: 232,
+            },
+            defense: {
+                base: 35,
+                min: 67,
+                max: 185,
+            },
+            specialAtk: {
+                base: 25,
+                min: 49,
+                max: 163,
+            },
+            specialDef: {
+                base: 35,
+                min: 67,
+                max: 185,
+            },
+            speed: {
+                base: 72,
+                min: 134,
+                max: 267,
+            },
+        },
+        evolutions: Evolution.Rattata
     },
     {
         id: 20,
         name: PokemonName.Raticate,
+        description: "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls.",
         img: addImagePath(PokemonName.Raticate, pokedex), 
         pokedexImg: addImagePath(PokemonName.Raticate, pokemon),
-        types: [Type.Normal]
+        types: [Type.Normal],
+        info: {
+            height: '0.7m',
+            species: Species.Mouse,
+            weight: '18.5kg',
+            abilties: [Ability.RunAway, Ability.Guts, Ability.Hustle],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 55,
+                min: 220,
+                max: 314,
+            },
+            attack: {
+                base: 81,
+                min: 150,
+                max: 287,
+            },
+            defense: {
+                base: 60,
+                min: 112,
+                max: 240,
+            },
+            specialAtk: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            specialDef: {
+                base: 70,
+                min: 130,
+                max: 262,
+            },
+            speed: {
+                base: 97,
+                min: 179,
+                max: 322,
+            },
+        },
+        evolutions: Evolution.Rattata
     },
     {
         id: 21,
         name: PokemonName.Spearow,
+        description: "It flaps its small wings busily to fly. Using its beak, it searches in grass for prey.",
         img: addImagePath(PokemonName.Spearow, pokedex), 
         pokedexImg: addImagePath(PokemonName.Spearow, pokemon),
-        types: [Type.Normal, Type.Flying]
+        types: [Type.Normal, Type.Flying],
+        info: {
+            height: '0.3m',
+            species: Species.TinyBird,
+            weight: '2kg',
+            abilties: [Ability.KeenEye, Ability.Sniper],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 40,
+                min: 190,
+                max: 284,
+            },
+            attack: {
+                base: 60,
+                min: 112,
+                max: 240,
+            },
+            defense: {
+                base: 30,
+                min: 58,
+                max: 174,
+            },
+            specialAtk: {
+                base: 31,
+                min: 60,
+                max: 177,
+            },
+            specialDef: {
+                base: 31,
+                min: 60,
+                max: 177,
+            },
+            speed: {
+                base: 70,
+                min: 130,
+                max: 262,
+            },
+        },
+        evolutions: Evolution.Spearow
     },
     {
         id: 22,
         name: PokemonName.Fearow,
+        description: "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
         img: addImagePath(PokemonName.Fearow, pokedex), 
         pokedexImg: addImagePath(PokemonName.Fearow, pokemon),
-        types: [Type.Normal, Type.Flying]
+        types: [Type.Normal, Type.Flying],
+        info: {
+            height: '1.2m',
+            species: Species.Beak,
+            weight: '38kg',
+            abilties: [Ability.KeenEye, Ability.Sniper],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 65,
+                min: 240,
+                max: 334,
+            },
+            attack: {
+                base: 90,
+                min: 166,
+                max: 306,
+            },
+            defense: {
+                base: 65,
+                min: 121,
+                max: 251,
+            },
+            specialAtk: {
+                base: 61,
+                min: 114,
+                max: 243,
+            },
+            specialDef: {
+                base: 61,
+                min: 114,
+                max: 243,
+            },
+            speed: {
+                base: 100,
+                min: 184,
+                max: 328,
+            }
+        },
+        evolutions: Evolution.Spearow
     },
     {
         id: 23,
         name: PokemonName.Ekans,
+        description: "It sneaks through grass without making a sound and strikes unsuspecting prey from behind.",
         img: addImagePath(PokemonName.Ekans, pokedex), 
         pokedexImg: addImagePath(PokemonName.Ekans, pokemon),
-        types: [Type.Poison]
+        types: [Type.Poison],
+        info: {
+            height: '2m',
+            species: Species.Snake,
+            weight: '6.9kg',
+            abilties: [Ability.Intimidate, Ability.ShedSkin, Ability.Unnerve],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 35,
+                min: 180,
+                max: 274,
+            },
+            attack: {
+                base: 60,
+                min: 112,
+                max: 240,
+            },
+            defense: {
+                base: 44,
+                min: 83,
+                max: 205,
+            },
+            specialAtk: {
+                base: 40,
+                min: 76,
+                max: 196,
+            },
+            specialDef: {
+                base: 54,
+                min: 101,
+                max: 227,
+            },
+            speed: {
+                base: 55,
+                min: 103,
+                max: 229,
+            }
+        },
+        evolutions: Evolution.Ekans
     },
     {
         id: 24,
         name: PokemonName.Arbok,
+        description: "The pattern on its belly is for intimidation. It constricts foes while they are frozen in fear.",
         img: addImagePath(PokemonName.Arbok, pokedex), 
         pokedexImg: addImagePath(PokemonName.Arbok, pokemon),
-        types: [Type.Poison]
+        types: [Type.Poison],
+        info: {
+            height: '3.5m',
+            species: Species.Cobra,
+            weight: '65kg',
+            abilties: [Ability.Intimidate, Ability.ShedSkin, Ability.Unnerve],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 60,
+                min: 230,
+                max: 324,
+            },
+            attack: {
+                base: 95,
+                min: 175,
+                max: 317,
+            },
+            defense: {
+                base: 69,
+                min: 128,
+                max: 260,
+            },
+            specialAtk: {
+                base: 65,
+                min: 121,
+                max: 251,
+            },
+            specialDef: {
+                base: 79,
+                min: 146,
+                max: 282,
+            },
+            speed: {
+                base: 80,
+                min: 148,
+                max: 284,
+            }
+        },
+        evolutions: Evolution.Ekans
     },    
     {
         id: 25,
         name: PokemonName.Pikachu,
+        description: "It lives in forests with others. It stores electricity in the pouches on its cheeks.",
         img: addImagePath(PokemonName.Pikachu, pokedex), 
         pokedexImg: addImagePath(PokemonName.Pikachu, pokemon),
-        types: [Type.Electric]
+        types: [Type.Electric],
+        info: {
+            height: '0.4m',
+            species: Species.Mouse,
+            weight: '6kg',
+            abilties: [Ability.Static, Ability.LightningRod],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 35,
+                min: 180,
+                max: 274,
+            },
+            attack: {
+                base: 55,
+                min: 103,
+                max: 229,
+            },
+            defense: {
+                base: 40,
+                min: 76,
+                max: 196,
+            },
+            specialAtk: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            specialDef: {
+                base: 50,
+                min: 94,
+                max: 218,
+            },
+            speed: {
+                base: 90,
+                min: 166,
+                max: 306,
+            }
+        },
+        evolutions: Evolution.Pikachu
     },
     {
         id: 26,
         name: PokemonName.Raichu,
+        description: "It turns aggressive if it has too much electricity in its body. It discharges power through its tail.",
         img: addImagePath(PokemonName.Raichu, pokedex), 
         pokedexImg: addImagePath(PokemonName.Raichu, pokemon),
-        types: [Type.Electric]
+        types: [Type.Electric],
+        info: {
+            height: '0.8m',
+            species: Species.Mouse,
+            weight: '30kg',
+            abilties: [Ability.Static, Ability.LightningRod],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 60,
+                min: 230,
+                max: 324,
+            },
+            attack: {
+                base: 90,
+                min: 166,
+                max: 306,
+            },
+            defense: {
+                base: 55,
+                min: 103,
+                max: 229,
+            },
+            specialAtk: {
+                base: 90,
+                min: 166,
+                max: 206,
+            },
+            specialDef: {
+                base: 80,
+                min: 148,
+                max: 284,
+            },
+            speed: {
+                base: 110,
+                min: 202,
+                max: 350,
+            }
+        },
+        evolutions: Evolution.Pikachu
     },
     {
         id: 27,
         name: PokemonName.Sandshrew,
         img: addImagePath(PokemonName.Sandshrew, pokedex), 
         pokedexImg: addImagePath(PokemonName.Sandshrew, pokemon),
-        types: [Type.Ground]
+        types: [Type.Ground],
+        info: {
+            height: '0.6m',
+            species: Species.Mouse,
+            weight: '12kg',
+            abilties: [Ability.SandVeil, Ability.SandRush],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 50,
+                min: 210,
+                max: 304,
+            },
+            attack: {
+                base: 75,
+                min: 139,
+                max: 273,
+            },
+            defense: {
+                base: 85,
+                min: 357,
+                max: 295,
+            },
+            specialAtk: {
+                base: 20,
+                min: 40,
+                max: 152,
+            },
+            specialDef: {
+                base: 30,
+                min: 58,
+                max: 174,
+            },
+            speed: {
+                base: 40,
+                min: 76,
+                max: 196,
+            }
+        },
+        evolutions: Evolution.Sandshrew
     },
     {
         id: 28,
         name: PokemonName.Sandslash,
         img: addImagePath(PokemonName.Sandslash, pokedex), 
         pokedexImg: addImagePath(PokemonName.Sandslash, pokemon),
-        types: [Type.Ground]
+        types: [Type.Ground],
+        info: {
+            height: '1m',
+            species: Species.Mouse,
+            weight: '29.5kg',
+            abilties: [Ability.SandVeil, Ability.SandRush],
+            gender: Gender.BothGenders
+        },
+        stats: {
+            hp: {
+                base: 75,
+                min: 260,
+                max: 354,
+            },
+            attack: {
+                base: 100,
+                min: 184,
+                max: 328,
+            },
+            defense: {
+                base: 110,
+                min: 202,
+                max: 350,
+            },
+            specialAtk: {
+                base: 45,
+                min: 85,
+                max: 207,
+            },
+            specialDef: {
+                base: 55,
+                min: 103,
+                max: 229,
+            },
+            speed: {
+                base: 65,
+                min: 121,
+                max: 251,
+            }
+        },
+        evolutions: Evolution.Sandshrew
     },
     {
         id: 29,
